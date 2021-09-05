@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -ex
+
 # Install prerequisites
 pip3 install ansible fabric3 jsonpickle requests PyYAML
 vagrant plugin install vagrant-vbguest
