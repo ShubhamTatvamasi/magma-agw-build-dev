@@ -22,3 +22,7 @@ jobs:
         prerelease: false
         files: |
           *.deb
+    - uses: actions/upload-artifact@v2
+      with:
+        name: magma-packages
+        path: magma/lte/gateway/magma-packages/*.deb
