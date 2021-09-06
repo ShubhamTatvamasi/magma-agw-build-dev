@@ -21,7 +21,7 @@ jobs:
         automatic_release_tag: ${{ steps.date.outputs.date }}
         prerelease: false
         files: |
-          *.deb
+          magma/lte/gateway/magma-packages/*.deb
     - uses: actions/upload-artifact@v2
       with:
         name: magma-packages
