@@ -4,6 +4,8 @@ set -ex
 
 # Install prerequisites
 pip3 install ansible fabric3 jsonpickle requests PyYAML
+
+brew install vagrant
 vagrant plugin install vagrant-vbguest
 
 # Cloning magma repo:
