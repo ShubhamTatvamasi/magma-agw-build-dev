@@ -15,8 +15,8 @@ sudo touch /etc/vbox/networks.conf
 
 # sudo sh -c "echo '* 192.168.0.0/16' > /etc/vbox/networks.conf"
 
-sudo echo '* 10.0.0.0/8 192.168.0.0/16' > /etc/vbox/networks.conf
-sudo echo '* 2001::/64' >> /etc/vbox/networks.conf
+sudo sh -c "echo '* 10.0.0.0/8 192.168.0.0/16' > /etc/vbox/networks.conf"
+sudo sh -c "echo '* 2001::/64' >> /etc/vbox/networks.conf"
 
 # start building magma
 cd magma/lte/gateway
