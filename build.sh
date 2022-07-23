@@ -17,7 +17,7 @@ sudo sh -c "echo '* 192.168.0.0/16' > /etc/vbox/networks.conf"
 # start building magma
 cd magma/lte/gateway
 # sed -i '' 's/1.1.20210928/1.1.20210618/' Vagrantfile
-fab dev package:vcs=git
+fab dev package
 
 # copy magma packages to github runner
 vagrant ssh -c "cp -r magma-packages /vagrant"
