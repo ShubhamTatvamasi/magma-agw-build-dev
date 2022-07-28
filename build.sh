@@ -12,15 +12,14 @@ git clone https://github.com/magma/magma.git --depth 1
 # Open up network interfaces for VM
 sudo mkdir -p /etc/vbox/
 sudo touch /etc/vbox/networks.conf
-
-# sudo sh -c "echo '* 192.168.0.0/16' > /etc/vbox/networks.conf"
-
-sudo sh -c "echo '* 10.0.0.0/8 192.168.0.0/16' > /etc/vbox/networks.conf"
-sudo sh -c "echo '* 2001::/64' >> /etc/vbox/networks.conf"
+sudo sh -c "echo '* 192.168.0.0/16' > /etc/vbox/networks.conf"
+sudo sh -c "echo '* 3001::/64' >> /etc/vbox/networks.conf"
 
 # start building magma
 cd magma/lte/gateway
 # sed -i '' 's/1.1.20210928/1.1.20210618/' Vagrantfile
+export MAGMA_DEV_CPUS=3
+export MAGMA_DEV_MEMORY_MB=9216
 fab dev package
 
 # copy magma packages to github runner
